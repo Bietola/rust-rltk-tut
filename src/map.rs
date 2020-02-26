@@ -19,6 +19,7 @@ pub enum TileType {
 
 /// A map is just a vector of tiles
 pub type Map = Vec<TileType>;
+pub type MapSlice<'a> = &'a [TileType];
 
 /*******************/
 /* Utility methods */
@@ -59,8 +60,8 @@ pub fn new_map() -> Map {
     // TODO: try to not generate walls over the player
     let mut rng = rltk::RandomNumberGenerator::new();
     for _ in 0..400 {
-        let x = rng.roll_dice(0, MAP_WIDTH as i32);
-        let y = rng.roll_dice(0, MAP_HEIGHT as i32);
+        let x = rng.roll_dice(1, (MAP_WIDTH - 1) as i32);
+        let y = rng.roll_dice(1, (MAP_HEIGHT - 1) as i32);
 
         result[xy_idx(x, y)] = TileType::Wall;
     }
@@ -73,7 +74,7 @@ pub fn new_map() -> Map {
 /************/
 
 /// Draw the map to an rtlk context
-pub fn draw_map(map: &Map, ctx: &mut Rltk) {
+pub fn draw_map(map: MapSlice, ctx: &mut Rltk) {
     for y in 0..MAP_HEIGHT {
         for x in 0..MAP_WIDTH {
             let tile = map[xy_idx(x, y)];
