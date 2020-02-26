@@ -1,6 +1,7 @@
 mod components;
 mod consts;
 mod game_state;
+mod map;
 
 use crate::components as cmp;
 use crate::game_state::State;
