@@ -17,9 +17,12 @@ fn main() {
 
     // Set up initial game state
     let mut gs = State { ecs: World::new() };
+    // Add components
     gs.ecs.register::<cmp::Pos>();
     gs.ecs.register::<cmp::Renderable>();
     gs.ecs.register::<cmp::Player>();
+    // Generate game map (only one for now)
+    gs.ecs.insert(map::new_map());
 
     // TODO: TEST: Create player
     gs.ecs

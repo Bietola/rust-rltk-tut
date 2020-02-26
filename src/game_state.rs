@@ -3,6 +3,7 @@ use crate::consts::{SCREEN_HEIGHT, SCREEN_WIDTH};
 use rltk::{Console, GameState, Rltk};
 use single::Single;
 use specs::prelude::*;
+use crate::map;
 
 /******************/
 /* Helper methods */
@@ -68,7 +69,11 @@ impl GameState for State {
         // Run game systems
         self.run_systems();
 
-        // Redraw screen
+        // Draw map
+        let mp = self.ecs.fetch::<map::Map>();
+        map::draw_map(&mp, ctx);
+
+        // Draw entities
         let positions = self.ecs.read_storage::<cmp::Pos>();
         let renderables = self.ecs.read_storage::<cmp::Renderable>();
 
