@@ -1,9 +1,10 @@
 mod components;
+mod consts;
 mod game_state;
 
-use rltk::RGB;
 use crate::components as cmp;
 use crate::game_state::State;
+use rltk::RGB;
 use specs::prelude::*;
 
 fn main() {
@@ -17,8 +18,21 @@ fn main() {
     let mut gs = State { ecs: World::new() };
     gs.ecs.register::<cmp::Pos>();
     gs.ecs.register::<cmp::Renderable>();
+    gs.ecs.register::<cmp::Player>();
 
-    // Create some entities
+    // TODO: TEST: Create player
+    gs.ecs
+        .create_entity()
+        .with(cmp::Player)
+        .with(cmp::Pos { x: 10, y: 30 })
+        .with(cmp::Renderable {
+            glyph: rltk::to_cp437('@'),
+            fg: RGB::named(rltk::WHITE),
+            bg: RGB::named(rltk::BLACK),
+        })
+        .build();
+
+    // TODO: TEST: Create some entities
     for i in 0..10 {
         gs.ecs
             .create_entity()

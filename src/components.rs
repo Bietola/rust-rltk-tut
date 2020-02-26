@@ -15,3 +15,5 @@ pub struct Renderable {
     pub bg: RGB,
 }
 
+#[derive(Component)]
+pub struct Player;
