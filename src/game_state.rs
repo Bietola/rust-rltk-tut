@@ -3,7 +3,7 @@ use crate::consts::{SCREEN_HEIGHT, SCREEN_WIDTH};
 use rltk::{Console, GameState, Rltk};
 use single::Single;
 use specs::prelude::*;
-use crate::map;
+use crate::map::{Map, Tile};
 
 /******************/
 /* Helper methods */
@@ -18,10 +18,20 @@ fn try_move_player(delta_x: i32, delta_y: i32, world: &mut World) {
         .single()
         .expect("Trying to move unexistent player!");
 
+    // Calculate new hypothetical player position
+    let new_x = player_pos.x + delta_x;
+    let new_y = player_pos.y + delta_y;
+
+    // Don't move player onto walls
+    let mp = world.fetch::<Map>();
+    if mp.at(new_x, new_y) == Tile::Wall {
+        return;
+    }
+
     // Move him
     use std::cmp::{max, min};
-    player_pos.x = max(0, min((SCREEN_WIDTH - 1) as i32, player_pos.x + delta_x));
-    player_pos.y = max(0, min((SCREEN_HEIGHT - 1) as i32, player_pos.y + delta_y));
+    player_pos.x = max(0, min((mp.get_width() - 1) as i32, player_pos.x + delta_x));
+    player_pos.y = max(0, min((mp.get_height() - 1) as i32, player_pos.y + delta_y));
 }
 
 /// Handles player input
@@ -70,8 +80,8 @@ impl GameState for State {
         self.run_systems();
 
         // Draw map
-        let mp = self.ecs.fetch::<map::Map>();
-        map::draw_map(&mp, ctx);
+        let mp = self.ecs.fetch::<Map>();
+        mp.draw(ctx);
 
         // Draw entities
         let positions = self.ecs.read_storage::<cmp::Pos>();
