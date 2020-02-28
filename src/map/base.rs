@@ -1,14 +1,37 @@
-use rltk::{Rltk, Console, RGB};
 use num::ToPrimitive;
-
-/*********/
-/* Types */
-/*********/
+use rltk::{Console, Rltk, RGB};
 
 #[derive(PartialEq, Copy, Clone)]
 /// A map tile
 pub enum Tile {
-    Wall, Floor,
+    Wall,
+    Floor,
+}
+
+impl Tile {
+    pub fn is_empty(&self) -> bool {
+        self == &Self::Floor
+    }
+}
+
+/// A map room
+pub struct Room {
+    x: i32,
+    y: i32,
+    width: i32,
+    height: i32,
+}
+
+impl Room {
+    fn intersect(&self, other: &Room) -> bool {
+        let bottom = self.y + self.height;
+        let right = self.x + self.width;
+        let other_bot = other.y + other.height;
+        let other_right = other.x + other.width;
+
+        ((other.y > self.y && other.y < bottom) || (self.y > other.y && self.y < other_bot))
+            && ((other.x > self.x && other.x < right) || (self.x > other.x && self.x < other_right))
+    }
 }
 
 /// The map
@@ -16,6 +39,7 @@ pub struct Map {
     width: usize,
     height: usize,
     tiles: Vec<Tile>,
+    rooms: Vec<Room>,
 }
 
 impl Map {
@@ -25,6 +49,7 @@ impl Map {
             width,
             height,
             tiles: vec![tile; width * height],
+            rooms: vec![],
         }
     }
 
@@ -43,10 +68,15 @@ impl Map {
         self.height
     }
 
+    /// Get iterator to internal tile storage
+    pub fn tiles(&self) -> impl Iterator<Item = Tile> {
+        self.tiles.into_iter()
+    }
+
     /// Go from cartesian coordinates to map tile index
     pub fn xy_idx<I>(&self, x: I, y: I) -> usize
     where
-        I: ToPrimitive
+        I: ToPrimitive,
     {
         y.to_usize().unwrap() * self.width + x.to_usize().unwrap()
     }
@@ -54,7 +84,7 @@ impl Map {
     /// Get tile at specified position
     pub fn at<I>(&self, x: I, y: I) -> Tile
     where
-        I: ToPrimitive
+        I: ToPrimitive,
     {
         self.tiles[self.xy_idx(x, y)]
     }
@@ -62,10 +92,43 @@ impl Map {
     /// Get tile at specified position (mutable)
     pub fn at_mut<I>(&mut self, x: I, y: I) -> &mut Tile
     where
-        I: ToPrimitive
+        I: ToPrimitive,
     {
         let idx = self.xy_idx(x, y);
         &mut self.tiles[idx]
+    }
+
+    /// Tries to add rectangular room to map. Returns success as boolean.
+    pub fn add_room(&mut self, new_room: Room) -> bool {
+        // Cannot add room if it does not respect map bounds.
+        // TODO: make this generic.
+        if new_room.x < 0
+            || new_room.y < 0
+            || new_room.x + new_room.width > self.width as i32
+            || new_room.y + new_room.height > self.height as i32
+        {
+            return false;
+        }
+
+        // Cannot add room if it intersects with already existing rooms.
+        for room in self.rooms {
+            if room.intersect(&new_room) {
+                return false;
+            }
+        }
+
+        // Carve room into map.
+        for y in 0..new_room.height {
+            for x in 0..new_room.width {
+                *self.at_mut(new_room.x + x, new_room.y + y) = Tile::Floor;
+            }
+        }
+
+        // Keep track of room structure.
+        self.rooms.push(new_room);
+
+        // All is fine.
+        true
     }
 
     /// Draw the map
@@ -79,7 +142,13 @@ impl Map {
                     Tile::Wall => rltk::to_cp437('#'),
                 };
 
-                ctx.set(x as i32, y as i32, RGB::named(rltk::WHITE), RGB::named(rltk::BLACK), glyph);
+                ctx.set(
+                    x as i32,
+                    y as i32,
+                    RGB::named(rltk::WHITE),
+                    RGB::named(rltk::BLACK),
+                    glyph,
+                );
             }
         }
     }

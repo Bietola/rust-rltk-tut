@@ -2,12 +2,13 @@ mod components;
 mod consts;
 mod game_state;
 mod map;
+mod utils;
 
 use crate::components as cmp;
 use crate::game_state::State;
+use consts::{SCREEN_HEIGHT, SCREEN_WIDTH};
 use rltk::RGB;
 use specs::prelude::*;
-use consts::{SCREEN_WIDTH, SCREEN_HEIGHT};
 
 fn main() {
     // Set up RLTK
@@ -23,7 +24,8 @@ fn main() {
     gs.ecs.register::<cmp::Renderable>();
     gs.ecs.register::<cmp::Player>();
     // Generate game map (only one for now)
-    gs.ecs.insert(map::gen::make_ugly_map(SCREEN_WIDTH, SCREEN_HEIGHT));
+    gs.ecs
+        .insert(map::gen::make_ugly_map(SCREEN_WIDTH, SCREEN_HEIGHT));
 
     // TODO: TEST: Create player
     gs.ecs
