@@ -85,7 +85,7 @@ impl Rect<i32> for Room {
 /* Direction */
 /*************/
 
-#[derive(Clone, Copy, PartialEq)]
+#[derive(Clone, Copy, PartialEq, Debug)]
 /// Your run of the mill cardinal direction
 pub enum Dir {
     North,

@@ -10,8 +10,12 @@ use consts::{SCREEN_HEIGHT, SCREEN_WIDTH};
 use map::gen::rnc;
 use rltk::RGB;
 use specs::prelude::*;
+use log4rs;
 
 fn main() {
+    // Setup logger backend
+    log4rs::init_file("config/log4rs.yaml", Default::default()).unwrap();
+
     // Set up RLTK
     use rltk::RltkBuilder;
     let context = RltkBuilder::simple80x50()

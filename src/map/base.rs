@@ -15,6 +15,7 @@ impl Tile {
 }
 
 /// A map room
+#[derive(Debug)]
 pub struct Room {
     pub x: i32,
     pub y: i32,

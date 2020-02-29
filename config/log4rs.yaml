@@ -1,0 +1,22 @@
+refresh_rate: 30 seconds
+
+appenders:
+  stdout:
+    kind: console
+  dungeon_gen:
+    kind: file
+    path: "log/dungeon_gen.log"
+    encoder:
+      pattern: "{d} [{l}] - {m}{n}"
+
+root:
+  level: warn
+  appenders:
+    - stdout
+
+loggers:
+  tutrl::map::gen::rnc:
+    level: info
+    appenders:
+      - dungeon_gen
+    additive: false

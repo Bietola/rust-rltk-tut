@@ -1,0 +1,178 @@
+2020-02-29T16:23:57.223321803+01:00 - DB: Moving corridor to (5, 45)
+2020-02-29T16:23:57.223430675+01:00 - DB: Moving corridor to (5, 44)
+2020-02-29T16:23:57.223463449+01:00 - DB: Moving corridor to (5, 43)
+2020-02-29T16:24:02.156508687+01:00 - DB: Moving corridor to (27, 42)
+2020-02-29T16:24:02.156634191+01:00 - DB: Moving corridor to (27, 41)
+2020-02-29T16:24:02.166109238+01:00 - DB: Moving corridor to (27, 40)
+2020-02-29T16:30:34.844555265+01:00 - Room roll successfull
+2020-02-29T16:30:34.844660350+01:00 - Spawning room: Room { x: 29, y: 10, width: 7, height: 4 }
+2020-02-29T16:30:34.844705273+01:00 - Corridor advancement attempt at (32, 11)
+2020-02-29T16:30:34.844738349+01:00 - Corridor advancement attempt at (32, 10)
+2020-02-29T16:30:34.844768730+01:00 - Corridor advancement attempt at (32, 9)
+2020-02-29T16:30:34.844798458+01:00 - Too many attempts... returning partial map
+
+2020-02-29T16:32:01.614283787+01:00 - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-02-29T16:32:01.614655402+01:00 - Room roll successfull
+2020-02-29T16:32:01.614694038+01:00 - Spawning room: Room { x: 26, y: 17, width: 8, height: 4 }
+2020-02-29T16:32:01.614736967+01:00 - Corridor advancement attempt at (30, 18)
+2020-02-29T16:32:01.614769352+01:00 - Corridor advancement attempt at (30, 17)
+2020-02-29T16:32:01.614799942+01:00 - Corridor advancement attempt at (30, 16)
+2020-02-29T16:32:01.614830146+01:00 - Too many attempts... returning partial map
+
+2020-02-29T16:33:58.272993575+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-02-29T16:33:58.273351024+01:00 [INFO] - Room roll successfull
+2020-02-29T16:33:58.273387616+01:00 [INFO] - Spawning room: Room { x: 31, y: 36, width: 6, height: 8 }
+2020-02-29T16:33:58.273431743+01:00 [INFO] - Corridor advancement attempt at (34, 39)
+2020-02-29T16:33:58.273464019+01:00 [INFO] - Corridor advancement attempt at (34, 38)
+2020-02-29T16:33:58.273494588+01:00 [INFO] - Corridor advancement attempt at (34, 37)
+2020-02-29T16:33:58.273524828+01:00 [WARN] - Too many attempts... returning partial map
+2020-02-29T16:36:18.138449805+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-02-29T16:36:18.139135638+01:00 [INFO] - Room roll successfull
+2020-02-29T16:36:18.139210708+01:00 [INFO] - Spawning room: Room { x: 52, y: 2, width: 7, height: 6 }
+2020-02-29T16:36:18.139255663+01:00 [INFO] - Corridor advancement attempt at (55, 5)
+2020-02-29T16:36:18.139289101+01:00 [INFO] - SUCCESS! Advancing corridor to (55, 4)
+2020-02-29T16:36:18.139319983+01:00 [INFO] - Corridor advancement attempt at (55, 4)
+2020-02-29T16:36:18.139350090+01:00 [INFO] - SUCCESS! Advancing corridor to (55, 3)
+2020-02-29T16:36:18.139380+01:00 [INFO] - Corridor advancement attempt at (55, 3)
+2020-02-29T16:36:18.139409531+01:00 [INFO] - SUCCESS! Advancing corridor to (55, 2)
+2020-02-29T16:36:18.139439657+01:00 [WARN] - Too many attempts... returning partial map
+
+2020-02-29T16:36:56.270400995+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-02-29T16:36:56.270776423+01:00 [INFO] - Room roll successfull
+2020-02-29T16:36:56.271173915+01:00 [INFO] - Spawning room: Room { x: 50, y: 10, width: 8, height: 4 }
+2020-02-29T16:36:56.271238981+01:00 [INFO] - Corridor advancement attempt at (54, 12)
+2020-02-29T16:36:56.271271221+01:00 [INFO] - SUCCESS! Advancing corridor to (54, 11)
+2020-02-29T16:36:56.271300619+01:00 [INFO] - Corridor advancement attempt at (54, 11)
+2020-02-29T16:36:56.271329813+01:00 [INFO] - SUCCESS! Advancing corridor to (54, 10)
+2020-02-29T16:36:56.271358678+01:00 [INFO] - Corridor advancement attempt at (54, 10)
+2020-02-29T16:36:56.271387503+01:00 [INFO] - SUCCESS! Advancing corridor to (54, 9)
+2020-02-29T16:36:56.271416205+01:00 [WARN] - Too many attempts... returning partial map
+
+2020-02-29T16:37:55.686296468+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-02-29T16:37:55.686657860+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.686694542+01:00 [INFO] - Spawning room: Room { x: 18, y: 8, width: 9, height: 8 }
+2020-02-29T16:37:55.686740641+01:00 [INFO] - Corridor advancement attempt at (22, 12)
+2020-02-29T16:37:55.686781430+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 11)
+2020-02-29T16:37:55.686812968+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.686841094+01:00 [INFO] - Spawning room: Room { x: 18, y: 8, width: 9, height: 7 }
+2020-02-29T16:37:55.686881403+01:00 [INFO] - Corridor advancement attempt at (22, 11)
+2020-02-29T16:37:55.686912013+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 10)
+2020-02-29T16:37:55.686969888+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687016922+01:00 [INFO] - Spawning room: Room { x: 20, y: 8, width: 5, height: 5 }
+2020-02-29T16:37:55.687054310+01:00 [INFO] - Corridor advancement attempt at (22, 10)
+2020-02-29T16:37:55.687084595+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 9)
+2020-02-29T16:37:55.687113903+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687141042+01:00 [INFO] - Spawning room: Room { x: 19, y: 5, width: 6, height: 9 }
+2020-02-29T16:37:55.687173463+01:00 [INFO] - Corridor advancement attempt at (22, 9)
+2020-02-29T16:37:55.687202769+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 8)
+2020-02-29T16:37:55.687232014+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687259018+01:00 [INFO] - Spawning room: Room { x: 20, y: 4, width: 5, height: 9 }
+2020-02-29T16:37:55.687291030+01:00 [INFO] - Corridor advancement attempt at (22, 8)
+2020-02-29T16:37:55.687320060+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 7)
+2020-02-29T16:37:55.687348951+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687375810+01:00 [INFO] - Spawning room: Room { x: 19, y: 4, width: 7, height: 7 }
+2020-02-29T16:37:55.687407824+01:00 [INFO] - Corridor advancement attempt at (22, 7)
+2020-02-29T16:37:55.687436647+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 6)
+2020-02-29T16:37:55.687465522+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687492826+01:00 [INFO] - Spawning room: Room { x: 19, y: 3, width: 7, height: 7 }
+2020-02-29T16:37:55.687524876+01:00 [INFO] - Corridor advancement attempt at (22, 6)
+2020-02-29T16:37:55.687553710+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 5)
+2020-02-29T16:37:55.687582823+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687609953+01:00 [INFO] - Spawning room: Room { x: 19, y: 3, width: 7, height: 4 }
+2020-02-29T16:37:55.687644976+01:00 [INFO] - Corridor advancement attempt at (22, 5)
+2020-02-29T16:37:55.687674122+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 4)
+2020-02-29T16:37:55.687703150+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687730318+01:00 [INFO] - Spawning room: Room { x: 18, y: 0, width: 8, height: 9 }
+2020-02-29T16:37:55.687762549+01:00 [INFO] - Corridor advancement attempt at (22, 4)
+2020-02-29T16:37:55.687791628+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 3)
+2020-02-29T16:37:55.687820774+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687847964+01:00 [INFO] - Spawning room: Room { x: 20, y: 0, width: 5, height: 7 }
+2020-02-29T16:37:55.687880253+01:00 [INFO] - Corridor advancement attempt at (22, 3)
+2020-02-29T16:37:55.687909134+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 2)
+2020-02-29T16:37:55.687938013+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.687965009+01:00 [INFO] - Spawning room: Room { x: 18, y: -2, width: 8, height: 9 }
+2020-02-29T16:37:55.687997987+01:00 [INFO] - Corridor advancement attempt at (22, 2)
+2020-02-29T16:37:55.688027129+01:00 [INFO] - SUCCESS! Advancing corridor to (22, 1)
+2020-02-29T16:37:55.688056291+01:00 [INFO] - Room roll successfull
+2020-02-29T16:37:55.688083244+01:00 [INFO] - Spawning room: Room { x: 19, y: -2, width: 7, height: 6 }
+2020-02-29T16:37:55.688115799+01:00 [INFO] - Corridor advancement attempt at (22, 1)
+2020-02-29T16:37:55.688144758+01:00 [INFO] - FAILED! OOB.
+2020-02-29T16:37:55.688171907+01:00 [INFO] - Corridor advancement attempt at (21, 1)
+2020-02-29T16:37:55.688200547+01:00 [INFO] - FAILED! OOB.
+2020-02-29T16:37:55.688227094+01:00 [INFO] - Corridor advancement attempt at (23, 1)
+2020-02-29T16:37:55.688255522+01:00 [INFO] - FAILED! OOB.
+2020-02-29T16:37:55.688282187+01:00 [WARN] - Too many attempts... returning partial map
+2020-02-29T16:59:06.621957483+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-02-29T16:59:06.622567241+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.622605701+01:00 [INFO] - Spawning room: Room { x: 7, y: 15, width: 7, height: 4 }
+2020-02-29T16:59:06.622649535+01:00 [INFO] - Corridor advancement attempt at (10, 17)
+2020-02-29T16:59:06.622682720+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 16)
+2020-02-29T16:59:06.622714459+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.622743806+01:00 [INFO] - Spawning room: Room { x: 7, y: 14, width: 6, height: 4 }
+2020-02-29T16:59:06.622782737+01:00 [INFO] - Corridor advancement attempt at (10, 16)
+2020-02-29T16:59:06.622814735+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 15)
+2020-02-29T16:59:06.622845705+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.622874758+01:00 [INFO] - Spawning room: Room { x: 8, y: 12, width: 5, height: 6 }
+2020-02-29T16:59:06.622944404+01:00 [INFO] - Corridor advancement attempt at (10, 15)
+2020-02-29T16:59:06.622998749+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 14)
+2020-02-29T16:59:06.623030227+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623059423+01:00 [INFO] - Spawning room: Room { x: 7, y: 11, width: 7, height: 6 }
+2020-02-29T16:59:06.623099855+01:00 [INFO] - Corridor advancement attempt at (10, 14)
+2020-02-29T16:59:06.623131591+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 13)
+2020-02-29T16:59:06.623162257+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623190899+01:00 [INFO] - Spawning room: Room { x: 6, y: 10, width: 9, height: 6 }
+2020-02-29T16:59:06.623225155+01:00 [INFO] - Corridor advancement attempt at (10, 13)
+2020-02-29T16:59:06.623256200+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 12)
+2020-02-29T16:59:06.623286800+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623315441+01:00 [INFO] - Spawning room: Room { x: 6, y: 8, width: 9, height: 8 }
+2020-02-29T16:59:06.623349293+01:00 [INFO] - Corridor advancement attempt at (10, 12)
+2020-02-29T16:59:06.623380251+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 11)
+2020-02-29T16:59:06.623410967+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623439700+01:00 [INFO] - Spawning room: Room { x: 6, y: 7, width: 8, height: 9 }
+2020-02-29T16:59:06.623473653+01:00 [INFO] - Corridor advancement attempt at (10, 11)
+2020-02-29T16:59:06.623504205+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 10)
+2020-02-29T16:59:06.623534515+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623563043+01:00 [INFO] - Spawning room: Room { x: 7, y: 8, width: 6, height: 4 }
+2020-02-29T16:59:06.623599537+01:00 [INFO] - Corridor advancement attempt at (10, 10)
+2020-02-29T16:59:06.623630188+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 9)
+2020-02-29T16:59:06.623660637+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623689058+01:00 [INFO] - Spawning room: Room { x: 8, y: 5, width: 4, height: 8 }
+2020-02-29T16:59:06.623744910+01:00 [INFO] - Corridor advancement attempt at (10, 9)
+2020-02-29T16:59:06.623776238+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 8)
+2020-02-29T16:59:06.623807358+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623836394+01:00 [INFO] - Spawning room: Room { x: 6, y: 6, width: 8, height: 4 }
+2020-02-29T16:59:06.623889531+01:00 [INFO] - Corridor advancement attempt at (10, 8)
+2020-02-29T16:59:06.623919904+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 7)
+2020-02-29T16:59:06.623949941+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.623978138+01:00 [INFO] - Spawning room: Room { x: 6, y: 4, width: 9, height: 7 }
+2020-02-29T16:59:06.624011533+01:00 [INFO] - Corridor advancement attempt at (10, 7)
+2020-02-29T16:59:06.624041886+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 6)
+2020-02-29T16:59:06.624072012+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.624100304+01:00 [INFO] - Spawning room: Room { x: 8, y: 4, width: 5, height: 5 }
+2020-02-29T16:59:06.624133667+01:00 [INFO] - Corridor advancement attempt at (10, 6)
+2020-02-29T16:59:06.624172645+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 5)
+2020-02-29T16:59:06.624204039+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.624232146+01:00 [INFO] - Spawning room: Room { x: 8, y: 3, width: 4, height: 5 }
+2020-02-29T16:59:06.624269706+01:00 [INFO] - Corridor advancement attempt at (10, 5)
+2020-02-29T16:59:06.624300978+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 4)
+2020-02-29T16:59:06.624331130+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.624359300+01:00 [INFO] - Spawning room: Room { x: 8, y: 0, width: 5, height: 9 }
+2020-02-29T16:59:06.624392509+01:00 [INFO] - Corridor advancement attempt at (10, 4)
+2020-02-29T16:59:06.624422561+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 3)
+2020-02-29T16:59:06.624452509+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.624480575+01:00 [INFO] - Spawning room: Room { x: 7, y: -1, width: 6, height: 8 }
+2020-02-29T16:59:06.624514698+01:00 [INFO] - Corridor advancement attempt at (10, 3)
+2020-02-29T16:59:06.624544638+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 2)
+2020-02-29T16:59:06.624574864+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.624602885+01:00 [INFO] - Spawning room: Room { x: 6, y: 0, width: 9, height: 5 }
+2020-02-29T16:59:06.624636075+01:00 [INFO] - Corridor advancement attempt at (10, 2)
+2020-02-29T16:59:06.624665950+01:00 [INFO] - SUCCESS! Advancing corridor to (10, 1)
+2020-02-29T16:59:06.624725008+01:00 [INFO] - Room roll successfull
+2020-02-29T16:59:06.624756722+01:00 [INFO] - Spawning room: Room { x: 8, y: -1, width: 4, height: 4 }
+2020-02-29T16:59:06.624791316+01:00 [INFO] - Corridor advancement attempt at (10, 1)
+2020-02-29T16:59:06.624821951+01:00 [INFO] - FAILED! OOB.
+2020-02-29T16:59:06.624850517+01:00 [INFO] - Corridor advancement attempt at (9, 1)
+2020-02-29T16:59:06.624880363+01:00 [INFO] - FAILED! OOB.
+2020-02-29T16:59:06.624908249+01:00 [INFO] - Corridor advancement attempt at (11, 1)
+2020-02-29T16:59:06.624937597+01:00 [INFO] - FAILED! OOB.
+2020-02-29T16:59:06.624965253+01:00 [WARN] - Too many attempts... returning partial map

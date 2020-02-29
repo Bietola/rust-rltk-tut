@@ -1,8 +1,8 @@
 use crate::map::base::*;
 use crate::utils::{Advance, Dir, Rect};
 use derive_builder::Builder;
-use itertools::Itertools;
 use rand::Rng;
+use log::{warn, error, info};
 
 /// Generate random ugly map
 pub fn make_ugly_map(width: usize, height: usize) -> Map {
@@ -65,6 +65,8 @@ pub mod rnc {
 
     /// Create new simple map with rooms and corridors (Moria style)
     pub fn make_map(conf: Config) -> Result<Map, Map> {
+        info!("STARTING NEW R&C DUNGEON GENERATION PROCESS");
+
         // Start with map filled with walls
         let mut res = Map::all(conf.map_width, conf.map_height, Tile::Wall);
 
@@ -84,6 +86,7 @@ pub mod rnc {
             // Generate room if chances are right.
             if rng.gen::<f32>() < conf.room_chance {
                 // Build room with corridor pointing at center.
+                info!("Room roll successfull");
                 let new_room = {
                     // Choose random room parameters.
                     let width = rng.gen_range(conf.min_room_size, conf.max_room_size) as i32;
@@ -100,11 +103,13 @@ pub mod rnc {
                 // TODO: Offset room randomly
 
                 //Try to add room to map (ignore failure and continue).
+                info!("Spawning room: {:?}", new_room);
                 let _ignore = res.add_room(new_room);
             }
             // Change corridor generation direction if chances are right.
             else if rng.gen::<f32>() < conf.turn_chance {
                 cur_dir = Dir::cycle(cur_dir);
+                info!("Corridor turn roll successful. New direction: {:?}", cur_dir);
             }
 
             // Advance corridor in current position; checking if the new position is valid.
@@ -115,37 +120,45 @@ pub mod rnc {
                 // Stop generation prematurely on third try.
                 // TODO: Give option to create dead ends.
                 if tries == 3 {
+                    warn!("Too many attempts... returning partial map");
                     return Err(res);
                 }
 
                 // Speculate new position (might be changed) if not valid.
-                let new_pos = (cur_x, cur_y).advance(cur_dir, 1);
-                cur_x = new_pos.0;
-                cur_y = new_pos.1;
+                let (new_x, new_y) = (cur_x, cur_y).advance(cur_dir, 1);
+                info!("Corridor advancement attempt at ({}, {})", new_x, cur_y);
 
                 // Change direction and retry if touching the boundary walls (the map's outer
                 // frame).
-                if res
+                let corridor_oob = !res
                     .trim_outer_frame(1)
                     .unwrap_or_else(|| {
+                        error!("FAILED! Map is too small...");
                         panic!(
                             "Map shouldn't absolutely be this small: {}x{}",
                             conf.map_width, conf.map_height
                         )
                     })
-                    .contains_point(cur_x as usize, cur_y as usize)
-                {
+                    .contains_point(new_x as usize, cur_y as usize);
+                if corridor_oob {
+                    info!("FAILED! OOB.");
                     cur_dir = cur_dir.cycle();
                     continue;
                 }
 
+                // TODO: make this work by placing corridor in other place.
                 // Do the same if about to enter a room.
-                for room in &res.rooms {
-                    if room.add_outer_frame(1).contains_point(cur_x, cur_y) {
-                        cur_dir = cur_dir.cycle();
-                        continue;
-                    }
-                }
+                // for room in &res.rooms {
+                //     if room.add_outer_frame(1).contains_point(new_x, cur_y) {
+                //         cur_dir = cur_dir.cycle();
+                //         continue;
+                //     }
+                // }
+                
+                info!("SUCCESS! Advancing corridor to ({}, {})", new_x, new_y);
+                cur_x = new_x;
+                cur_y = new_y;
+                break;
             }
         }
 
