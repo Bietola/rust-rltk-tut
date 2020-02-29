@@ -107,13 +107,15 @@ pub mod rnc {
                 // TODO: Offset room randomly
 
                 //Try to add room to map (ignore failure and continue).
-                info!("Spawning room: {:?}", new_room);
-                let _ignore = res.add_room(new_room);
+                info!("Spawning room: {:?}.", new_room);
+                if !res.add_room(new_room) {
+                    warn!("FAILED room spawn, skipping...");
+                }
             }
             // Change corridor generation direction if chances are right.
             else if rng.gen_range(0., 100.) < conf.turn_chance {
                 cur_dir = Dir::cycle(cur_dir);
-                info!("Corridor turn roll successful. New corridor advancement direction: {:?}", cur_dir);
+                info!("Corridor turn roll successful. New corridor advancement direction: {:?}.", cur_dir);
             }
 
             // Advance corridor in current position; checking if the new position is valid.
@@ -139,7 +141,7 @@ pub mod rnc {
                             conf.map_width, conf.map_height
                         )
                     })
-                    .contains_point(new_x as usize, new_y as usize);
+                    .contains_point(new_x, new_y);
                 if corridor_oob {
                     info!("Corridor failed to advance (OOB)!");
                     cur_dir = cur_dir.cycle();

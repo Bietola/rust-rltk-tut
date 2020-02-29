@@ -1,6 +1,6 @@
+use crate::utils::rect::Rect;
 use num::ToPrimitive;
 use rltk::{Console, Rltk, RGB};
-use crate::utils::rect::Rect;
 
 #[derive(PartialEq, Copy, Clone)]
 /// A map tile
@@ -91,7 +91,7 @@ impl Map {
     where
         I: ToPrimitive + std::fmt::Debug,
     {
-        if !self.contains_point(x.to_usize().unwrap(), y.to_usize().unwrap()) {
+        if !self.contains_point(x.to_i32().unwrap(), y.to_i32().unwrap()) {
             panic!("Point ({:?}, {:?}) not contained by map!", x, y);
         }
 
@@ -103,7 +103,7 @@ impl Map {
     where
         I: ToPrimitive + std::fmt::Debug,
     {
-        if !self.contains_point(x.to_usize().unwrap(), y.to_usize().unwrap()) {
+        if !self.contains_point(x.to_i32().unwrap(), y.to_i32().unwrap()) {
             panic!("Point ({:?}, {:?}) not contained by map!", x, y);
         }
 
@@ -115,10 +115,10 @@ impl Map {
     pub fn add_room(&mut self, new_room: Room) -> bool {
         // Cannot add room if it does not respect map bounds.
         // TODO: make this generic.
-        if new_room.x < 0
-            || new_room.y < 0
-            || new_room.x + new_room.width > self.width as i32
-            || new_room.y + new_room.height > self.height as i32
+        if !self
+            .trim_outer_frame(1)
+            .expect("Map too small to be trimmed...")
+            .contains_rect(&new_room)
         {
             return false;
         }

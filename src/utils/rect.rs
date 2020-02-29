@@ -1,35 +1,27 @@
 use crate::map::{Map, Room};
-use num_traits::{NumAssign, NumOps};
-
-/// A utility trait with all the needed contraints for an element to be used to describe the
-/// dimensions of a `Rect`.
-///
-/// TODO: Use a macro to avoid the duplicated list of traits.
-pub trait RectEle: NumOps + NumAssign + Ord + Sized + Copy {}
-impl<T> RectEle for T where T: NumOps + NumAssign + Ord + Sized + Copy {}
 
 #[derive(PartialEq, Debug, Clone)]
 /// A rectangle described by its four corners.
-pub struct SimpleRect<T: RectEle> {
-    x: T,
-    y: T,
-    w: T,
-    h: T,
+pub struct SimpleRect {
+    x: i32,
+    y: i32,
+    w: i32,
+    h: i32,
 }
 
-impl<T: RectEle> From<(T, T, T, T)> for SimpleRect<T> {
-    fn from((x, y, w, h): (T, T, T, T)) -> Self {
+impl From<(i32, i32, i32, i32)> for SimpleRect {
+    fn from((x, y, w, h): (i32, i32, i32, i32)) -> Self {
         Self { x, y, w, h }
     }
 }
 
 /// A useful trait for rectangle-like things.
-pub trait Rect<T: RectEle> {
+pub trait Rect {
     /// In this order: x and y of top left corner fallowed by width and height.
-    fn get_corners(&self) -> (T, T, T, T);
+    fn get_corners(&self) -> (i32, i32, i32, i32);
 
     /// Trim outer border of rectangle.
-    fn trim_outer_frame(&self, amount: T) -> Option<SimpleRect<T>> {
+    fn trim_outer_frame(&self, amount: i32) -> Option<SimpleRect> {
         let (mut x, mut y, mut w, mut h) = self.get_corners();
 
         x += amount;
@@ -38,7 +30,7 @@ pub trait Rect<T: RectEle> {
         h -= amount;
 
         // No rectangles taking up negative space are created...
-        if w < T::zero() || h < T::zero() {
+        if w < 0 || h < 0 {
             None
         } else {
             Some(SimpleRect { x, y, w, h })
@@ -46,7 +38,7 @@ pub trait Rect<T: RectEle> {
     }
 
     /// Wrap the rectangle in an outer frame of `thickness` thickness.
-    fn add_outer_frame(&self, thickness: T) -> SimpleRect<T> {
+    fn add_outer_frame(&self, thickness: i32) -> SimpleRect {
         let (mut x, mut y, mut w, mut h) = self.get_corners();
 
         x -= thickness;
@@ -58,22 +50,18 @@ pub trait Rect<T: RectEle> {
     }
 
     /// Checks if rect contains a given point.
-    fn contains_point(&self, x: T, y: T) -> bool {
+    fn contains_point(&self, x: i32, y: i32) -> bool {
         let (rx, ry, rw, rh) = self.get_corners();
 
         x >= rx && x <= rx + rw && y >= ry && y <= ry + rh
     }
 
     /// Checks if rect contains a given second rect.
-    fn contains_rect<R, E>(&self, inner_rect: R) -> bool
+    fn contains_rect<R>(&self, inner_rect: R) -> bool
     where
-        E: RectEle + Into<T>,
-        R: Rect<E>,
+        R: Rect,
     {
         let (ix, iy, iw, ih) = inner_rect.get_corners();
-
-        // TODO: Maybe use a macro to iterate over the tuple...
-        let (ix, iy, iw, ih): (T, T, T, T) = (ix.into(), iy.into(), iw.into(), ih.into());
         let (ox, oy, ow, oh) = self.get_corners();
 
         ix >= ox && ix + iw <= ox + ow && iy >= oy && iy + ih <= oy + oh
@@ -81,36 +69,33 @@ pub trait Rect<T: RectEle> {
 }
 
 /// SimpleRect is obviously a Rect.
-impl<T> Rect<T> for SimpleRect<T>
-where
-    T: RectEle,
+impl Rect for SimpleRect
 {
-    fn get_corners(&self) -> (T, T, T, T) {
+    fn get_corners(&self) -> (i32, i32, i32, i32) {
         (self.x, self.y, self.w, self.h)
     }
 }
 
 /// Utility impl for Map.
-impl Rect<usize> for Map {
-    fn get_corners(&self) -> (usize, usize, usize, usize) {
-        (0, 0, self.width, self.height)
+impl Rect for Map {
+    fn get_corners(&self) -> (i32, i32, i32, i32) {
+        (0, 0, self.width as i32, self.height as i32)
     }
 }
 
 /// Utility impl for Room.
-impl Rect<i32> for Room {
+impl Rect for Room {
     fn get_corners(&self) -> (i32, i32, i32, i32) {
         (self.x, self.y, self.width, self.height)
     }
 }
 
 /// Automatic impl for references of structs for which `Rect` is already impl-ed.
-impl<T, R> Rect<T> for &R
+impl<R> Rect for &R
 where
-    T: RectEle,
-    R: Rect<T>,
+    R: Rect,
 {
-    fn get_corners(&self) -> (T, T, T, T) {
+    fn get_corners(&self) -> (i32, i32, i32, i32) {
         (*self).get_corners()
     }
 }
