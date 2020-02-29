@@ -1,5 +1,6 @@
 use num::ToPrimitive;
 use rltk::{Console, Rltk, RGB};
+use crate::utils::rect::Rect;
 
 #[derive(PartialEq, Copy, Clone)]
 /// A map tile
@@ -88,16 +89,24 @@ impl Map {
     /// Get tile at specified position
     pub fn at<I>(&self, x: I, y: I) -> Tile
     where
-        I: ToPrimitive,
+        I: ToPrimitive + std::fmt::Debug,
     {
+        if !self.contains_point(x.to_usize().unwrap(), y.to_usize().unwrap()) {
+            panic!("Point ({:?}, {:?}) not contained by map!", x, y);
+        }
+
         self.tiles[self.xy_idx(x, y)]
     }
 
     /// Get tile at specified position (mutable)
     pub fn at_mut<I>(&mut self, x: I, y: I) -> &mut Tile
     where
-        I: ToPrimitive,
+        I: ToPrimitive + std::fmt::Debug,
     {
+        if !self.contains_point(x.to_usize().unwrap(), y.to_usize().unwrap()) {
+            panic!("Point ({:?}, {:?}) not contained by map!", x, y);
+        }
+
         let idx = self.xy_idx(x, y);
         &mut self.tiles[idx]
     }

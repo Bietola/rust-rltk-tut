@@ -1,5 +1,5 @@
-use num_traits::{NumOps, NumAssign};
 use crate::map::{Map, Room};
+use num_traits::{NumAssign, NumOps};
 
 /// A utility trait with all the needed contraints for an element to be used to describe the
 /// dimensions of a `Rect`.
@@ -7,6 +7,21 @@ use crate::map::{Map, Room};
 /// TODO: Use a macro to avoid the duplicated list of traits.
 pub trait RectEle: NumOps + NumAssign + Ord + Sized + Copy {}
 impl<T> RectEle for T where T: NumOps + NumAssign + Ord + Sized + Copy {}
+
+#[derive(PartialEq, Debug, Clone)]
+/// A rectangle described by its four corners.
+pub struct SimpleRect<T: RectEle> {
+    x: T,
+    y: T,
+    w: T,
+    h: T,
+}
+
+impl<T: RectEle> From<(T, T, T, T)> for SimpleRect<T> {
+    fn from((x, y, w, h): (T, T, T, T)) -> Self {
+        Self { x, y, w, h }
+    }
+}
 
 /// A useful trait for rectangle-like things.
 pub trait Rect<T: RectEle> {
@@ -46,16 +61,8 @@ pub trait Rect<T: RectEle> {
     fn contains_point(&self, x: T, y: T) -> bool {
         let (rx, ry, rw, rh) = self.get_corners();
 
-        x > rx && x < rx + rw && y > ry && y < ry + rh
+        x >= rx && x <= rx + rw && y >= ry && y <= ry + rh
     }
-}
-
-/// A rectangle described by its four corners.
-pub struct SimpleRect<T: RectEle> {
-    x: T,
-    y: T,
-    w: T,
-    h: T,
 }
 
 impl<T: RectEle> Rect<T> for SimpleRect<T> {
@@ -76,3 +83,67 @@ impl Rect<i32> for Room {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn trim_outer_frame_1_to_4x5() {
+        let r = SimpleRect::from((0, 0, 4, 5));
+
+        assert_eq!(
+            SimpleRect::from((1, 1, 3, 4)),
+            r.trim_outer_frame(1).unwrap(),
+        )
+    }
+
+    #[test]
+    fn contains_point_bottom_right() {
+        let r = SimpleRect::from((0, 0, 4, 5));
+        let p = (4, 5);
+
+        assert!(r.contains_point(p.0, p.1))
+    }
+
+    #[test]
+    fn add_outer_frame_1_to_4x5() {
+        let r = SimpleRect::from((1, 1, 5, 6));
+
+        assert_eq!(SimpleRect::from((0, 0, 6, 7)), r.add_outer_frame(1),)
+    }
+
+    #[test]
+    fn contains_rect_contains_all_its_points() {
+        let r = SimpleRect::from((0, 2, 6, 12));
+
+        for x in r.x..=(r.x + r.w) {
+            for y in r.y..=(r.y + r.h) {
+                assert!(r.contains_point(x, y))
+            }
+        }
+    }
+
+    #[test]
+    fn contains_rect_does_not_contain_its_outer_frame() {
+        let r = SimpleRect {
+            x: 1,
+            y: 2,
+            w: 6,
+            h: 12,
+        };
+
+        for &x in &[r.x - 1, r.x + r.w + 1] {
+            for y in r.y..=(r.y + r.h) {
+                println!("{}, {}", x, y);
+                assert!(!r.contains_point(x, y));
+            }
+        }
+
+        for &y in &[r.y - 1, r.y + r.h + 1] {
+            for x in r.x..=(r.x + r.w) {
+                println!("{}, {}", x, y);
+                assert!(!r.contains_point(x, y));
+            }
+        }
+    }
+}
