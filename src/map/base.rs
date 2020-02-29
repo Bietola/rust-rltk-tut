@@ -9,8 +9,9 @@ pub enum Tile {
 }
 
 impl Tile {
-    pub fn is_empty(&self) -> bool {
-        self == &Self::Floor
+    #[allow(dead_code)]
+    pub fn is_empty(self) -> bool {
+        self == Self::Floor
     }
 }
 
@@ -55,6 +56,7 @@ impl Map {
     }
 
     /// New map made entrirely from specified tile
+    #[allow(dead_code)]
     pub fn empty(width: usize, height: usize) -> Self {
         Self::all(width, height, Tile::Floor)
     }
@@ -70,6 +72,7 @@ impl Map {
     }
 
     /// Get iterator to internal tile storage
+    #[allow(dead_code)]
     pub fn tiles(&self) -> impl Iterator<Item = &Tile> {
         self.tiles.iter()
     }

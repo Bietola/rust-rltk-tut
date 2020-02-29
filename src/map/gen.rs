@@ -1,10 +1,14 @@
 use crate::map::base::*;
-use crate::utils::{Advance, Dir, Rect};
+use crate::utils::{
+    dir::{Advance, Dir},
+    rect::*,
+};
 use derive_builder::Builder;
 use rand::Rng;
 use log::{warn, error, info};
 
 /// Generate random ugly map
+#[allow(dead_code)]
 pub fn make_ugly_map(width: usize, height: usize) -> Map {
     let mut res = Map::empty(width, height);
 

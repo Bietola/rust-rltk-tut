@@ -1,5 +1,4 @@
 use crate::components as cmp;
-use crate::consts::{SCREEN_HEIGHT, SCREEN_WIDTH};
 use rltk::{Console, GameState, Rltk};
 use single::Single;
 use specs::prelude::*;
