@@ -16,14 +16,14 @@ impl Tile {
 
 /// A map room
 pub struct Room {
-    x: i32,
-    y: i32,
-    width: i32,
-    height: i32,
+    pub x: i32,
+    pub y: i32,
+    pub width: i32,
+    pub height: i32,
 }
 
 impl Room {
-    fn intersect(&self, other: &Room) -> bool {
+    pub fn intersect(&self, other: &Room) -> bool {
         let bottom = self.y + self.height;
         let right = self.x + self.width;
         let other_bot = other.y + other.height;
@@ -36,10 +36,10 @@ impl Room {
 
 /// The map
 pub struct Map {
-    width: usize,
-    height: usize,
-    tiles: Vec<Tile>,
-    rooms: Vec<Room>,
+    pub width: usize,
+    pub height: usize,
+    pub tiles: Vec<Tile>,
+    pub rooms: Vec<Room>,
 }
 
 impl Map {
@@ -69,8 +69,8 @@ impl Map {
     }
 
     /// Get iterator to internal tile storage
-    pub fn tiles(&self) -> impl Iterator<Item = Tile> {
-        self.tiles.into_iter()
+    pub fn tiles(&self) -> impl Iterator<Item = &Tile> {
+        self.tiles.iter()
     }
 
     /// Go from cartesian coordinates to map tile index
@@ -111,7 +111,7 @@ impl Map {
         }
 
         // Cannot add room if it intersects with already existing rooms.
-        for room in self.rooms {
+        for room in &self.rooms {
             if room.intersect(&new_room) {
                 return false;
             }

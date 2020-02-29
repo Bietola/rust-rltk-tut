@@ -7,6 +7,7 @@ mod utils;
 use crate::components as cmp;
 use crate::game_state::State;
 use consts::{SCREEN_HEIGHT, SCREEN_WIDTH};
+use map::gen::rnc;
 use rltk::RGB;
 use specs::prelude::*;
 
@@ -24,8 +25,21 @@ fn main() {
     gs.ecs.register::<cmp::Renderable>();
     gs.ecs.register::<cmp::Player>();
     // Generate game map (only one for now)
-    gs.ecs
-        .insert(map::gen::make_ugly_map(SCREEN_WIDTH, SCREEN_HEIGHT));
+    gs.ecs.insert(
+        rnc::make_map(
+            rnc::ConfigBuilder::default()
+                .map_width(SCREEN_WIDTH)
+                .map_height(SCREEN_HEIGHT)
+                .build()
+                .unwrap(),
+        )
+        .unwrap_or_else(|partial_map| {
+            // TODO: use logging
+            println!("Map generation was stopped prematurely...");
+
+            partial_map
+        })
+    );
 
     // TODO: TEST: Create player
     gs.ecs

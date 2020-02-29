@@ -1,5 +1,5 @@
 use crate::map::base::*;
-use crate::utils::{Advance, Dir};
+use crate::utils::{Advance, Dir, Rect};
 use derive_builder::Builder;
 use itertools::Itertools;
 use rand::Rng;
@@ -32,41 +32,60 @@ pub fn make_ugly_map(width: usize, height: usize) -> Map {
 }
 
 /// Simple Rooms 'n' Corridors Generator
-mod rnc {
+pub mod rnc {
     use super::*;
 
-    struct FailureInfo {
-        pub partial_map: Map,
-        pub rooms_left: u32,
-    }
-
     #[derive(Builder)]
+    #[builder(default)]
     pub struct Config {
-        map_w: usize,
-        map_h: usize,
+        map_width: usize,
+        map_height: usize,
         room_chance: f32,
         turn_chance: f32,
         min_room_size: u32,
         max_room_size: u32,
+        iterations: u32,
         // TODO: add corridor length and room connection options
         // NB. for now all rooms are connected
     }
 
-    /// Create new simple map with rooms and corridors (Moria style)
-    fn make_map(conf: Config) -> Result<Map, FailureInfo> {
-        let res = Map::all(conf.map_w, conf.map_h, Tile::Wall);
+    impl Default for Config {
+        fn default() -> Self {
+            Config {
+                map_width: 100,
+                map_height: 100,
+                room_chance: 1.,
+                turn_chance: 1.,
+                min_room_size: 4,
+                max_room_size: 10,
+                iterations: 100,
+            }
+        }
+    }
 
-        // Create rooms
+    /// Create new simple map with rooms and corridors (Moria style)
+    pub fn make_map(conf: Config) -> Result<Map, Map> {
+        // Start with map filled with walls
+        let mut res = Map::all(conf.map_width, conf.map_height, Tile::Wall);
+
         let mut rng = rand::thread_rng();
+
+        // Corridor starting state (random/arbitrary).
         let mut cur_dir = Dir::South;
-        let mut cur_x = 0;
-        let mut cur_y = 0;
-        loop {
-            // Generate room die roll
+        let mut cur_x: i32 = rng.gen_range(1, conf.map_width as i32);
+        let mut cur_y: i32 = rng.gen_range(1, conf.map_height as i32);
+
+        // Start creating rooms and corridors!
+        for _ in 0..conf.iterations {
+            // Carve corridor.
+            // TODO: do not carve map boder walls.
+            *res.at_mut(cur_x, cur_y) = Tile::Floor;
+
+            // Generate room if chances are right.
             if rng.gen::<f32>() < conf.room_chance {
-                // Build room with corridor pointing at center
+                // Build room with corridor pointing at center.
                 let new_room = {
-                    // Choose random room parameters
+                    // Choose random room parameters.
                     let width = rng.gen_range(conf.min_room_size, conf.max_room_size) as i32;
                     let height = rng.gen_range(conf.min_room_size, conf.max_room_size) as i32;
 
@@ -80,16 +99,57 @@ mod rnc {
 
                 // TODO: Offset room randomly
 
-                //Try to add room to map (ignore failure and continue)
+                //Try to add room to map (ignore failure and continue).
                 let _ignore = res.add_room(new_room);
             }
-            // Turn corridor
+            // Change corridor generation direction if chances are right.
             else if rng.gen::<f32>() < conf.turn_chance {
                 cur_dir = Dir::cycle(cur_dir);
             }
 
-            // Advance corridor in current position
-            let (cur_x, cur_y) = (cur_x, cur_y).advance(cur_dir, 1);
+            // Advance corridor in current position; checking if the new position is valid.
+            //
+            //  TODO: use desctructuring assignment once it is integrated into rust
+            //        link: https://github.com/rust-lang/rfcs/issues/372
+            for tries in 0..4 {
+                // Stop generation prematurely on third try.
+                // TODO: Give option to create dead ends.
+                if tries == 3 {
+                    return Err(res);
+                }
+
+                // Speculate new position (might be changed) if not valid.
+                let new_pos = (cur_x, cur_y).advance(cur_dir, 1);
+                cur_x = new_pos.0;
+                cur_y = new_pos.1;
+
+                // Change direction and retry if touching the boundary walls (the map's outer
+                // frame).
+                if res
+                    .trim_outer_frame(1)
+                    .unwrap_or_else(|| {
+                        panic!(
+                            "Map shouldn't absolutely be this small: {}x{}",
+                            conf.map_width, conf.map_height
+                        )
+                    })
+                    .contains_point(cur_x as usize, cur_y as usize)
+                {
+                    cur_dir = cur_dir.cycle();
+                    continue;
+                }
+
+                // Do the same if about to enter a room.
+                for room in &res.rooms {
+                    if room.add_outer_frame(1).contains_point(cur_x, cur_y) {
+                        cur_dir = cur_dir.cycle();
+                        continue;
+                    }
+                }
+            }
         }
+
+        // All fine
+        Ok(res)
     }
 }
