@@ -63,25 +63,58 @@ pub trait Rect<T: RectEle> {
 
         x >= rx && x <= rx + rw && y >= ry && y <= ry + rh
     }
+
+    /// Checks if rect contains a given second rect.
+    fn contains_rect<R, E>(&self, inner_rect: R) -> bool
+    where
+        E: RectEle + Into<T>,
+        R: Rect<E>,
+    {
+        let (ix, iy, iw, ih) = inner_rect.get_corners();
+
+        // TODO: Maybe use a macro to iterate over the tuple...
+        let (ix, iy, iw, ih): (T, T, T, T) = (ix.into(), iy.into(), iw.into(), ih.into());
+        let (ox, oy, ow, oh) = self.get_corners();
+
+        ix >= ox && ix + iw <= ox + ow && iy >= oy && iy + ih <= oy + oh
+    }
 }
 
-impl<T: RectEle> Rect<T> for SimpleRect<T> {
+/// SimpleRect is obviously a Rect.
+impl<T> Rect<T> for SimpleRect<T>
+where
+    T: RectEle,
+{
     fn get_corners(&self) -> (T, T, T, T) {
         (self.x, self.y, self.w, self.h)
     }
 }
 
+/// Utility impl for Map.
 impl Rect<usize> for Map {
     fn get_corners(&self) -> (usize, usize, usize, usize) {
         (0, 0, self.width, self.height)
     }
 }
 
+/// Utility impl for Room.
 impl Rect<i32> for Room {
     fn get_corners(&self) -> (i32, i32, i32, i32) {
         (self.x, self.y, self.width, self.height)
     }
 }
+
+/// Automatic impl for references of structs for which `Rect` is already impl-ed.
+impl<T, R> Rect<T> for &R
+where
+    T: RectEle,
+    R: Rect<T>,
+{
+    fn get_corners(&self) -> (T, T, T, T) {
+        (*self).get_corners()
+    }
+}
+
 
 #[cfg(test)]
 mod tests {
@@ -113,7 +146,7 @@ mod tests {
     }
 
     #[test]
-    fn contains_rect_contains_all_its_points() {
+    fn contains_point_rect_contains_all_its_points() {
         let r = SimpleRect::from((0, 2, 6, 12));
 
         for x in r.x..=(r.x + r.w) {
@@ -124,7 +157,7 @@ mod tests {
     }
 
     #[test]
-    fn contains_rect_does_not_contain_its_outer_frame() {
+    fn contains_point_rect_does_not_contain_its_outer_frame() {
         let r = SimpleRect {
             x: 1,
             y: 2,
@@ -145,5 +178,17 @@ mod tests {
                 assert!(!r.contains_point(x, y));
             }
         }
+    }
+
+    #[test]
+    fn contains_rect_rect_contains_itself() {
+        let r = SimpleRect {
+            x: 1,
+            y: 2,
+            w: 6,
+            h: 12,
+        };
+
+        assert!(r.contains_rect(&r));
     }
 }
