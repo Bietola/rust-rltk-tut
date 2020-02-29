@@ -58,7 +58,7 @@ pub mod rnc {
                 turn_chance: 1.,
                 min_room_size: 4,
                 max_room_size: 10,
-                iterations: 100,
+                iterations: 1000,
             }
         }
     }
@@ -84,7 +84,7 @@ pub mod rnc {
             *res.at_mut(cur_x, cur_y) = Tile::Floor;
 
             // Generate room if chances are right.
-            if rng.gen::<f32>() < conf.room_chance {
+            if rng.gen_range(0., 100.) < conf.room_chance {
                 // Build room with corridor pointing at center.
                 info!("Room roll successfull");
                 let new_room = {
@@ -107,26 +107,22 @@ pub mod rnc {
                 let _ignore = res.add_room(new_room);
             }
             // Change corridor generation direction if chances are right.
-            else if rng.gen::<f32>() < conf.turn_chance {
+            else if rng.gen_range(0., 100.) < conf.turn_chance {
                 cur_dir = Dir::cycle(cur_dir);
-                info!("Corridor turn roll successful. New direction: {:?}", cur_dir);
+                info!("Corridor turn roll successful. New corridor advancement direction: {:?}", cur_dir);
             }
 
             // Advance corridor in current position; checking if the new position is valid.
-            //
-            //  TODO: use desctructuring assignment once it is integrated into rust
-            //        link: https://github.com/rust-lang/rfcs/issues/372
             for tries in 0..4 {
                 // Stop generation prematurely on third try.
                 // TODO: Give option to create dead ends.
                 if tries == 3 {
-                    warn!("Too many attempts... returning partial map");
+                    warn!("Too many corridor advancement attempts... returning partial map.");
                     return Err(res);
                 }
 
                 // Speculate new position (might be changed) if not valid.
                 let (new_x, new_y) = (cur_x, cur_y).advance(cur_dir, 1);
-                info!("Corridor advancement attempt at ({}, {})", new_x, cur_y);
 
                 // Change direction and retry if touching the boundary walls (the map's outer
                 // frame).
@@ -139,9 +135,9 @@ pub mod rnc {
                             conf.map_width, conf.map_height
                         )
                     })
-                    .contains_point(new_x as usize, cur_y as usize);
+                    .contains_point(new_x as usize, new_y as usize);
                 if corridor_oob {
-                    info!("FAILED! OOB.");
+                    info!("Corridor failed to advance (OOB)!");
                     cur_dir = cur_dir.cycle();
                     continue;
                 }
@@ -155,7 +151,7 @@ pub mod rnc {
                 //     }
                 // }
                 
-                info!("SUCCESS! Advancing corridor to ({}, {})", new_x, new_y);
+                // No problems with new corridor position... perform the advancement.
                 cur_x = new_x;
                 cur_y = new_y;
                 break;

@@ -99,10 +99,10 @@ impl Dir {
     pub fn cycle(self) -> Self {
         use Dir::*;
         match self {
-            North => South,
+            North => East,
+            East => South,
             South => West,
-            West => East,
-            East => North,
+            West => North,
         }
     }
 }
@@ -126,8 +126,8 @@ where
                 _ => x,
             },
             match dir {
-                Dir::North => y + steps,
-                Dir::South => y - steps,
+                Dir::North => y - steps,
+                Dir::South => y + steps,
                 _ => y,
             },
         )
