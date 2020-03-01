@@ -26,8 +26,8 @@ pub trait Rect {
 
         x += amount;
         y += amount;
-        w -= amount;
-        h -= amount;
+        w -= amount * 2;
+        h -= amount * 2;
 
         // No rectangles taking up negative space are created...
         if w < 0 || h < 0 {
@@ -50,10 +50,14 @@ pub trait Rect {
     }
 
     /// Checks if rect contains a given point.
-    fn contains_point(&self, x: i32, y: i32) -> bool {
+    fn contains_point(&self, x: i32, y: i32) -> bool
+    where
+        // TODO: find out why this is needem
+        Self: Sized,
+    {
         let (rx, ry, rw, rh) = self.get_corners();
 
-        x >= rx && x <= rx + rw && y >= ry && y <= ry + rh
+        x >= rx && x < rx + rw && y >= ry && y < ry + rh
     }
 
     /// Checks if rect contains a given second rect.
@@ -69,8 +73,7 @@ pub trait Rect {
 }
 
 /// SimpleRect is obviously a Rect.
-impl Rect for SimpleRect
-{
+impl Rect for SimpleRect {
     fn get_corners(&self) -> (i32, i32, i32, i32) {
         (self.x, self.y, self.w, self.h)
     }
@@ -100,6 +103,15 @@ where
     }
 }
 
+/// Any reference to rect-like thing can be turned into a `SimpleRect`
+impl<R> From<&R> for SimpleRect
+where
+    R: Rect,
+{
+    fn from(rect: &R) -> Self {
+        SimpleRect::from(rect.get_corners())
+    }
+}
 
 #[cfg(test)]
 mod tests {
@@ -110,7 +122,7 @@ mod tests {
         let r = SimpleRect::from((0, 0, 4, 5));
 
         assert_eq!(
-            SimpleRect::from((1, 1, 3, 4)),
+            SimpleRect::from((1, 1, 2, 3)),
             r.trim_outer_frame(1).unwrap(),
         )
     }

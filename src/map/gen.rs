@@ -4,8 +4,8 @@ use crate::utils::{
     rect::*,
 };
 use derive_builder::Builder;
+use log::{error, info, warn};
 use rand::Rng;
-use log::{warn, error, info};
 
 /// Generate random ugly map
 #[allow(dead_code)]
@@ -78,13 +78,12 @@ pub mod rnc {
 
         // Corridor starting state (random/arbitrary).
         let mut cur_dir = Dir::South;
-        let mut cur_x: i32 = rng.gen_range(1, conf.map_width as i32);
-        let mut cur_y: i32 = rng.gen_range(1, conf.map_height as i32);
+        let mut cur_x: i32 = rng.gen_range(1, (conf.map_width - 1) as i32);
+        let mut cur_y: i32 = rng.gen_range(1, (conf.map_height - 1) as i32);
 
         // Start creating rooms and corridors!
         for _ in 0..conf.iterations {
             // Carve corridor.
-            // TODO: do not carve map boder walls.
             *res.at_mut(cur_x, cur_y) = Tile::Floor;
 
             // Generate room if chances are right.
@@ -107,7 +106,10 @@ pub mod rnc {
                 // TODO: Offset room randomly
 
                 //Try to add room to map (ignore failure and continue).
-                info!("Spawning room: {:?}.", new_room);
+                info!(
+                    "Spawning room: {:?} [corridor pos: ({}, {})].",
+                    new_room, cur_x, cur_y
+                );
                 if !res.add_room(new_room) {
                     warn!("FAILED room spawn, skipping...");
                 }
@@ -115,7 +117,7 @@ pub mod rnc {
             // Change corridor generation direction if chances are right.
             else if rng.gen_range(0., 100.) < conf.turn_chance {
                 cur_dir = Dir::cycle(cur_dir);
-                info!("Corridor turn roll successful. New corridor advancement direction: {:?}.", cur_dir);
+                info!("Corridor turn roll successful. New corridor advancement direction: {:?} [corridor pos: ({}, {})].", cur_dir, cur_x, cur_y);
             }
 
             // Advance corridor in current position; checking if the new position is valid.
@@ -132,8 +134,15 @@ pub mod rnc {
 
                 // Change direction and retry if touching the boundary walls (the map's outer
                 // frame).
+                if new_y == 49 {
+                    println!("Evaluating pos OOB: {}, {}", new_x, new_y);
+                }
                 let corridor_oob = !res
                     .trim_outer_frame(1)
+                    .and_then(|t| {
+                        println!("{:?}", t);
+                        Some(t)
+                    })
                     .unwrap_or_else(|| {
                         error!("FAILED! Map is too small...");
                         panic!(
@@ -143,6 +152,9 @@ pub mod rnc {
                     })
                     .contains_point(new_x, new_y);
                 if corridor_oob {
+                    if new_y == 49 {
+                        println!("SUCCESS");
+                    }
                     info!("Corridor failed to advance (OOB)!");
                     cur_dir = cur_dir.cycle();
                     continue;
@@ -156,7 +168,7 @@ pub mod rnc {
                 //         continue;
                 //     }
                 // }
-                
+
                 // No problems with new corridor position... perform the advancement.
                 cur_x = new_x;
                 cur_y = new_y;
