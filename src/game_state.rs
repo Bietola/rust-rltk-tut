@@ -1,8 +1,8 @@
 use crate::components as cmp;
+use crate::map::{Map, Tile};
 use rltk::{Console, GameState, Rltk};
 use single::Single;
 use specs::prelude::*;
-use crate::map::{Map, Tile};
 
 /******************/
 /* Helper methods */
@@ -63,26 +63,59 @@ impl State {
         // TODO: add some systems
         self.ecs.maintain();
     }
+
+    // TODO: find a way to make this work
+    //
+    // Maybe use a macro, e.g.:
+    //
+    // ``` rust
+    // let pl_viewshed = specs_get!{
+    //     cmp::Player -> cmp::Viewshed
+    // }
+    // ```
+    //
+    // ``` rust
+    // Get a generic `Component` belonging to the player
+    // fn get_player_cmp<C>(&self) -> C
+    //     where C: Component,
+    // {
+    //     let wanted_cmps = self.ecs.read_storage::<C>();
+    //     let player = self.ecs.read_storage::<cmp::Player>();
+    //     let (res, _pl) = (&wanted_cmps, &player)
+    //         .join()
+    //         .single()
+    //         .unwrap_or_else(|e| panic!("Problem with findings player's {}: {}", std::any::type_name::<C>(), e));
+
+    //     *res.clone()
+    // }
+    // ```
 }
 
 impl GameState for State {
     /// Simulate one tick of the game state
     /// NB. also redraws the screen
     fn tick(&mut self, ctx: &mut Rltk) {
-        // Clear screen
+        // Clear screen.
         ctx.cls();
 
-        // Handle player input
+        // Handle player input.
         player_input(self, ctx);
-       
-        // Run game systems
+
+        // Run game systems.
         self.run_systems();
 
-        // Draw map
+        // Draw map.
         let mp = self.ecs.fetch::<Map>();
-        mp.draw(ctx);
+        let viewsheds = self.ecs.read_storage::<cmp::Viewshed>();
+        let player = self.ecs.read_storage::<cmp::Player>();
+        let (pl_viewshed, _pl) = (&viewsheds, &player)
+            .join()
+            .single()
+            // TODO: parameterize err msg.
+            .unwrap_or_else(|e| panic!("Problem with findings player's viewshed: {}", e));
+        mp.draw(pl_viewshed, ctx);
 
-        // Draw entities
+        // Draw entities.
         let positions = self.ecs.read_storage::<cmp::Pos>();
         let renderables = self.ecs.read_storage::<cmp::Renderable>();
 

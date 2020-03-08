@@ -1,8 +1,9 @@
+use crate::components as cmp;
 use crate::utils::rect::Rect;
 use num::ToPrimitive;
-use rltk::{Console, Rltk, RGB};
+use rltk::{Console, Point, Rltk, RGB};
 
-#[derive(PartialEq, Copy, Clone)]
+#[derive(PartialEq, Copy, Clone, Debug)]
 /// A map tile
 pub enum Tile {
     Wall,
@@ -10,8 +11,7 @@ pub enum Tile {
 }
 
 impl Tile {
-    #[allow(dead_code)]
-    pub fn is_empty(self) -> bool {
+    pub fn is_passable(self) -> bool {
         self == Self::Floor
     }
 }
@@ -86,6 +86,15 @@ impl Map {
         y.to_usize().unwrap() * self.width + x.to_usize().unwrap()
     }
 
+    /// Go from map idx to map cartesian coordinates
+    pub fn idx_xy(&self, idx: usize) -> Point
+    {
+        Point {
+            x: (idx % self.width) as i32,
+            y: (idx / self.width) as i32,
+        }
+    }
+
     /// Get tile at specified position
     pub fn at<I>(&self, x: I, y: I) -> Tile
     where
@@ -144,8 +153,8 @@ impl Map {
         true
     }
 
-    /// Draw the map
-    pub fn draw(&self, ctx: &mut Rltk) {
+    /// Draw the map.
+    pub fn draw(&self, pl_viewshed: &cmp::Viewshed, ctx: &mut Rltk) {
         for y in 0..self.height {
             for x in 0..self.width {
                 let tile = self.at(x, y);
@@ -155,14 +164,45 @@ impl Map {
                     Tile::Wall => rltk::to_cp437('#'),
                 };
 
-                ctx.set(
-                    x as i32,
-                    y as i32,
-                    RGB::named(rltk::WHITE),
-                    RGB::named(rltk::BLACK),
-                    glyph,
-                );
+                // Draw only if visible by the player.
+                // if pl_viewshed.visible_tiles.contains(&Point::new(x, y)) {
+                    ctx.set(
+                        x as i32,
+                        y as i32,
+                        RGB::named(rltk::WHITE),
+                        RGB::named(rltk::BLACK),
+                        glyph,
+                    );
+                // }
             }
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn idx_xy_simple() {
+        // The test map.
+        // *  0  1  2  3  4
+        // 0  0  1  2  3  4
+        // 1  5  6  7  8  9
+        // 2 10 11 12 13 14
+        let map = Map::empty(5, 3);
+
+        // Test some random point.
+        assert_eq!(map.idx_xy(5), Point::new(0, 1));
+        assert_eq!(map.idx_xy(2), Point::new(2, 0));
+        assert_eq!(map.idx_xy(14), Point::new(4, 2));
+        assert_eq!(map.idx_xy(7), Point::new(2, 1));
+        assert_eq!(map.idx_xy(3), Point::new(3, 0));
+    }
+
+    #[test]
+    fn idx_xy_inv() {
+        // TODO: eri qui CICCIO.
+        unimplemented!();
     }
 }

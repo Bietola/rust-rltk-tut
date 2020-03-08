@@ -130,7 +130,7 @@ mod tests {
     #[test]
     fn contains_point_bottom_right() {
         let r = SimpleRect::from((0, 0, 4, 5));
-        let p = (4, 5);
+        let p = (3, 4);
 
         assert!(r.contains_point(p.0, p.1))
     }
@@ -146,8 +146,8 @@ mod tests {
     fn contains_point_rect_contains_all_its_points() {
         let r = SimpleRect::from((0, 2, 6, 12));
 
-        for x in r.x..=(r.x + r.w) {
-            for y in r.y..=(r.y + r.h) {
+        for x in r.x..(r.x + r.w) {
+            for y in r.y..(r.y + r.h) {
                 assert!(r.contains_point(x, y))
             }
         }

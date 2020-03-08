@@ -134,15 +134,8 @@ pub mod rnc {
 
                 // Change direction and retry if touching the boundary walls (the map's outer
                 // frame).
-                if new_y == 49 {
-                    println!("Evaluating pos OOB: {}, {}", new_x, new_y);
-                }
                 let corridor_oob = !res
                     .trim_outer_frame(1)
-                    .and_then(|t| {
-                        println!("{:?}", t);
-                        Some(t)
-                    })
                     .unwrap_or_else(|| {
                         error!("FAILED! Map is too small...");
                         panic!(
@@ -152,9 +145,6 @@ pub mod rnc {
                     })
                     .contains_point(new_x, new_y);
                 if corridor_oob {
-                    if new_y == 49 {
-                        println!("SUCCESS");
-                    }
                     info!("Corridor failed to advance (OOB)!");
                     cur_dir = cur_dir.cycle();
                     continue;
