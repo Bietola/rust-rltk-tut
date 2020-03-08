@@ -66,7 +66,7 @@ fn main() {
         .create_entity()
         .with(cmp::Player)
         .with(cmp::Pos::from(player_spawn_point))
-        .with(cmp::Viewshed::new(8))
+        .with(cmp::Viewshed::new(10))
         .with(cmp::Renderable {
             glyph: rltk::to_cp437('@'),
             fg: RGB::named(rltk::WHITE),

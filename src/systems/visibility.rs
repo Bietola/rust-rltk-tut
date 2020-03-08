@@ -5,7 +5,7 @@ use rltk::Point;
 use crate::utils::rect::Rect;
 
 /// Updates viewsheds using position and game map info.
-struct Visibility;
+pub struct Visibility;
 
 impl<'a> System<'a> for Visibility {
     type SystemData = (

@@ -10485,3 +10485,447 @@
 2020-03-08T17:15:00.940078745+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (16, 20)].
 2020-03-08T17:15:00.940146098+01:00 [INFO] - Corridor failed to advance (OOB)!
 2020-03-08T17:15:00.940183953+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.355786107+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T17:15:45.356169730+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.356208131+01:00 [INFO] - Spawning room: Room { x: 35, y: 21, width: 6, height: 9 } [corridor pos: (38, 25)].
+2020-03-08T17:15:45.356262425+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.356355686+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.356391054+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.356421135+01:00 [INFO] - Spawning room: Room { x: -1, y: 42, width: 5, height: 6 } [corridor pos: (1, 45)].
+2020-03-08T17:15:45.356457723+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.356491061+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.356519670+01:00 [INFO] - Spawning room: Room { x: -2, y: 29, width: 7, height: 7 } [corridor pos: (1, 32)].
+2020-03-08T17:15:45.356555221+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.356616797+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.356648813+01:00 [INFO] - Spawning room: Room { x: -1, y: 12, width: 4, height: 9 } [corridor pos: (1, 16)].
+2020-03-08T17:15:45.356684857+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.356718744+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.356784669+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.356816869+01:00 [INFO] - Spawning room: Room { x: 30, y: -1, width: 8, height: 5 } [corridor pos: (34, 1)].
+2020-03-08T17:15:45.356853185+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.356945391+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.356984054+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.357013336+01:00 [INFO] - Spawning room: Room { x: 75, y: 19, width: 7, height: 5 } [corridor pos: (78, 21)].
+2020-03-08T17:15:45.357048460+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.357112425+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.357178101+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.357210638+01:00 [INFO] - Spawning room: Room { x: 56, y: 46, width: 7, height: 4 } [corridor pos: (59, 48)].
+2020-03-08T17:15:45.357246259+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.357311210+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (32, 48)].
+2020-03-08T17:15:45.357388587+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.357455384+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.357487856+01:00 [INFO] - Spawning room: Room { x: 53, y: -3, width: 7, height: 9 } [corridor pos: (56, 1)].
+2020-03-08T17:15:45.357523859+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.357559499+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.357660208+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.357695809+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (73, 48)].
+2020-03-08T17:15:45.357763961+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.357796224+01:00 [INFO] - Spawning room: Room { x: 71, y: 19, width: 4, height: 8 } [corridor pos: (73, 23)].
+2020-03-08T17:15:45.357871818+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.357907167+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.357940640+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 12)].
+2020-03-08T17:15:45.358044748+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.358107933+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.358174620+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.358206546+01:00 [INFO] - Spawning room: Room { x: 24, y: -2, width: 7, height: 6 } [corridor pos: (27, 1)].
+2020-03-08T17:15:45.358242705+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:15:45.358308161+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (59, 1)].
+2020-03-08T17:15:45.358347368+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (59, 7)].
+2020-03-08T17:15:45.358421909+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (8, 7)].
+2020-03-08T17:15:45.358487606+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.358527843+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (34, 1)].
+2020-03-08T17:15:45.358624661+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.358682645+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (25, 48)].
+2020-03-08T17:15:45.358796023+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.358831128+01:00 [INFO] - Spawning room: Room { x: 22, y: 30, width: 6, height: 7 } [corridor pos: (25, 33)].
+2020-03-08T17:15:45.358877283+01:00 [INFO] - Room roll successfull
+2020-03-08T17:15:45.358907835+01:00 [INFO] - Spawning room: Room { x: 23, y: 25, width: 5, height: 5 } [corridor pos: (25, 27)].
+2020-03-08T17:15:45.358970918+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (25, 10)].
+2020-03-08T17:15:45.359005111+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (26, 10)].
+2020-03-08T17:15:45.359099519+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.359139601+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:15:45.359232629+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.760086951+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T17:16:29.760473795+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.760513834+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.760545083+01:00 [INFO] - Spawning room: Room { x: 37, y: 46, width: 7, height: 5 } [corridor pos: (40, 48)].
+2020-03-08T17:16:29.760583167+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:16:29.760674692+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.760742104+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 21)].
+2020-03-08T17:16:29.760849363+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.760885776+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.760915798+01:00 [INFO] - Spawning room: Room { x: 75, y: 27, width: 6, height: 9 } [corridor pos: (78, 31)].
+2020-03-08T17:16:29.760951709+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:16:29.761013309+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.761050385+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.761088007+01:00 [INFO] - Spawning room: Room { x: 61, y: 44, width: 4, height: 9 } [corridor pos: (63, 48)].
+2020-03-08T17:16:29.761124560+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:16:29.761220636+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.761315071+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 3)].
+2020-03-08T17:16:29.761420869+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.761491565+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.761554817+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.761586582+01:00 [INFO] - Spawning room: Room { x: 58, y: 44, width: 9, height: 9 } [corridor pos: (62, 48)].
+2020-03-08T17:16:29.761622641+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:16:29.761715022+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (12, 48)].
+2020-03-08T17:16:29.761756531+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (12, 32)].
+2020-03-08T17:16:29.761822816+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.761854082+01:00 [INFO] - Spawning room: Room { x: 28, y: 30, width: 4, height: 5 } [corridor pos: (30, 32)].
+2020-03-08T17:16:29.761936226+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.761972102+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.762001803+01:00 [INFO] - Spawning room: Room { x: 74, y: 36, width: 8, height: 7 } [corridor pos: (78, 39)].
+2020-03-08T17:16:29.762037621+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:16:29.762096594+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762135553+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (57, 48)].
+2020-03-08T17:16:29.762205909+01:00 [INFO] - Room roll successfull
+2020-03-08T17:16:29.762237625+01:00 [INFO] - Spawning room: Room { x: 53, y: 9, width: 9, height: 8 } [corridor pos: (57, 13)].
+2020-03-08T17:16:29.762314055+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762353728+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762412084+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 5)].
+2020-03-08T17:16:29.762517549+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762552011+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762697941+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762760300+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 5)].
+2020-03-08T17:16:29.762904688+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762939245+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.762970981+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (4, 1)].
+2020-03-08T17:16:29.763006067+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (4, 3)].
+2020-03-08T17:16:29.763041327+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:16:29.763098673+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.624328431+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T17:22:13.624723605+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.624765305+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.624798950+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.624829022+01:00 [INFO] - Spawning room: Room { x: -1, y: 40, width: 4, height: 6 } [corridor pos: (1, 43)].
+2020-03-08T17:22:13.624866771+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.624929371+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 24)].
+2020-03-08T17:22:13.624968566+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (7, 24)].
+2020-03-08T17:22:13.625044358+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625079352+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625147210+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.625178769+01:00 [INFO] - Spawning room: Room { x: -1, y: 5, width: 4, height: 4 } [corridor pos: (1, 7)].
+2020-03-08T17:22:13.625214598+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.625245787+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625368127+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625403119+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.625431867+01:00 [INFO] - Spawning room: Room { x: 75, y: 8, width: 6, height: 4 } [corridor pos: (78, 10)].
+2020-03-08T17:22:13.625466658+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.625532796+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625598131+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.625629500+01:00 [INFO] - Spawning room: Room { x: 49, y: 44, width: 9, height: 9 } [corridor pos: (53, 48)].
+2020-03-08T17:22:13.625664808+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.625757312+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625828784+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625862503+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (4, 1)].
+2020-03-08T17:22:13.625959096+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.625993024+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.626027659+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.626056407+01:00 [INFO] - Spawning room: Room { x: -1, y: 28, width: 5, height: 6 } [corridor pos: (1, 31)].
+2020-03-08T17:22:13.626091692+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.626155316+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.626279344+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.626311235+01:00 [INFO] - Spawning room: Room { x: 73, y: -2, width: 6, height: 6 } [corridor pos: (76, 1)].
+2020-03-08T17:22:13.626347189+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.626377151+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.626444062+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.626475170+01:00 [INFO] - Spawning room: Room { x: 76, y: 38, width: 5, height: 4 } [corridor pos: (78, 40)].
+2020-03-08T17:22:13.626510031+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.626541280+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.626663540+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.626734511+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.626876691+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.626910047+01:00 [INFO] - Spawning room: Room { x: 50, y: -3, width: 8, height: 8 } [corridor pos: (54, 1)].
+2020-03-08T17:22:13.626945920+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.627008405+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.627079768+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.627115015+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (69, 48)].
+2020-03-08T17:22:13.627149985+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.627178586+01:00 [INFO] - Spawning room: Room { x: 65, y: 43, width: 8, height: 7 } [corridor pos: (69, 46)].
+2020-03-08T17:22:13.627213401+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.627304105+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.627339386+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.627431536+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:22:13.627472359+01:00 [INFO] - Room roll successfull
+2020-03-08T17:22:13.627533841+01:00 [INFO] - Spawning room: Room { x: 44, y: 45, width: 6, height: 6 } [corridor pos: (47, 48)].
+2020-03-08T17:22:13.627572632+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:22:13.627606196+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (35, 48)].
+2020-03-08T17:31:31.710545243+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T17:31:31.710991637+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711101091+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711166126+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.711198771+01:00 [INFO] - Spawning room: Room { x: -3, y: 33, width: 9, height: 4 } [corridor pos: (1, 35)].
+2020-03-08T17:31:31.711236770+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.711300661+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.711332631+01:00 [INFO] - Spawning room: Room { x: -1, y: 5, width: 5, height: 5 } [corridor pos: (1, 7)].
+2020-03-08T17:31:31.711368868+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.711400920+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711433294+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (6, 1)].
+2020-03-08T17:31:31.711497948+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.711530451+01:00 [INFO] - Spawning room: Room { x: 2, y: 12, width: 8, height: 4 } [corridor pos: (6, 14)].
+2020-03-08T17:31:31.711609336+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711644283+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.711674044+01:00 [INFO] - Spawning room: Room { x: 0, y: 45, width: 9, height: 6 } [corridor pos: (4, 48)].
+2020-03-08T17:31:31.711709709+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.711740173+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711809231+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711934112+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.711999498+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.712031224+01:00 [INFO] - Spawning room: Room { x: 74, y: 24, width: 8, height: 4 } [corridor pos: (78, 26)].
+2020-03-08T17:31:31.712066839+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.712098988+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.712127877+01:00 [INFO] - Spawning room: Room { x: 76, y: 32, width: 4, height: 7 } [corridor pos: (78, 35)].
+2020-03-08T17:31:31.712162906+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.712194879+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 44)].
+2020-03-08T17:31:31.712265836+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.712297715+01:00 [INFO] - Spawning room: Room { x: 36, y: 41, width: 4, height: 6 } [corridor pos: (38, 44)].
+2020-03-08T17:31:31.712368457+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.712401347+01:00 [INFO] - Spawning room: Room { x: 26, y: 40, width: 8, height: 8 } [corridor pos: (30, 44)].
+2020-03-08T17:31:31.712481306+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.712513853+01:00 [INFO] - Spawning room: Room { x: -3, y: 40, width: 8, height: 8 } [corridor pos: (1, 44)].
+2020-03-08T17:31:31.712549941+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.712579019+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.712609174+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 42)].
+2020-03-08T17:31:31.712680025+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (38, 42)].
+2020-03-08T17:31:31.712718593+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.712751110+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (29, 48)].
+2020-03-08T17:31:31.712856123+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.712890098+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (30, 1)].
+2020-03-08T17:31:31.712962539+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.712993872+01:00 [INFO] - Spawning room: Room { x: 26, y: 43, width: 8, height: 6 } [corridor pos: (30, 46)].
+2020-03-08T17:31:31.713036486+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713068215+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (26, 48)].
+2020-03-08T17:31:31.713164063+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713201723+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (43, 1)].
+2020-03-08T17:31:31.713297611+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713363982+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (13, 48)].
+2020-03-08T17:31:31.713439067+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713537244+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713631153+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713729838+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.713761370+01:00 [INFO] - Spawning room: Room { x: 9, y: 44, width: 7, height: 9 } [corridor pos: (12, 48)].
+2020-03-08T17:31:31.713796614+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T17:31:31.713828844+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T17:31:31.713890270+01:00 [INFO] - Room roll successfull
+2020-03-08T17:31:31.713921558+01:00 [INFO] - Spawning room: Room { x: -1, y: 27, width: 5, height: 5 } [corridor pos: (1, 29)].
+2020-03-08T17:31:31.713957153+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:18:15.084639607+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T19:18:15.085616876+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.085665227+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.085761467+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.085863856+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (70, 1)].
+2020-03-08T19:18:15.085926588+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (70, 7)].
+2020-03-08T19:18:15.086031726+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.086068469+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.086176880+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (35, 1)].
+2020-03-08T19:18:15.086353578+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (35, 30)].
+2020-03-08T19:18:15.086487372+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.086546113+01:00 [INFO] - Spawning room: Room { x: 20, y: 26, width: 4, height: 9 } [corridor pos: (22, 30)].
+2020-03-08T19:18:15.086643308+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (13, 30)].
+2020-03-08T19:18:15.086781532+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.086892854+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.086963456+01:00 [INFO] - Spawning room: Room { x: 41, y: -1, width: 8, height: 5 } [corridor pos: (45, 1)].
+2020-03-08T19:18:15.087038873+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:18:15.087099924+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (54, 1)].
+2020-03-08T19:18:15.087347198+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.087410960+01:00 [INFO] - Spawning room: Room { x: 51, y: 15, width: 7, height: 7 } [corridor pos: (54, 18)].
+2020-03-08T19:18:15.087503978+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.087591790+01:00 [INFO] - Spawning room: Room { x: 51, y: 28, width: 7, height: 8 } [corridor pos: (54, 32)].
+2020-03-08T19:18:15.087738637+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.087880935+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.088016664+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.088118863+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.088208935+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 34)].
+2020-03-08T19:18:15.088337511+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.088391517+01:00 [INFO] - Spawning room: Room { x: 50, y: 30, width: 9, height: 8 } [corridor pos: (54, 34)].
+2020-03-08T19:18:15.088427242+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:18:15.088520641+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.088561154+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 5)].
+2020-03-08T19:18:15.088623341+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.088655283+01:00 [INFO] - Spawning room: Room { x: 4, y: 2, width: 7, height: 7 } [corridor pos: (7, 5)].
+2020-03-08T19:18:15.088764614+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.088829289+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 23)].
+2020-03-08T19:18:15.088868070+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.088896953+01:00 [INFO] - Spawning room: Room { x: 68, y: 19, width: 7, height: 9 } [corridor pos: (71, 23)].
+2020-03-08T19:18:15.088947622+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.088977362+01:00 [INFO] - Spawning room: Room { x: 45, y: 19, width: 6, height: 9 } [corridor pos: (48, 23)].
+2020-03-08T19:18:15.089081253+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.089116876+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 15)].
+2020-03-08T19:18:15.089203881+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (16, 15)].
+2020-03-08T19:18:15.089275091+01:00 [INFO] - Room roll successfull
+2020-03-08T19:18:15.089326602+01:00 [INFO] - Spawning room: Room { x: 14, y: 36, width: 4, height: 4 } [corridor pos: (16, 38)].
+2020-03-08T19:18:15.089413831+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:18:15.089451246+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.555101036+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T19:19:23.555562450+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.555659139+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.555697396+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 41)].
+2020-03-08T19:19:23.555774919+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.555808418+01:00 [INFO] - Spawning room: Room { x: 49, y: 37, width: 5, height: 9 } [corridor pos: (51, 41)].
+2020-03-08T19:19:23.555933947+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.556017645+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.556091549+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (59, 48)].
+2020-03-08T19:19:23.556313262+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.556378233+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.556498006+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.556552812+01:00 [INFO] - Spawning room: Room { x: 75, y: 17, width: 7, height: 4 } [corridor pos: (78, 19)].
+2020-03-08T19:19:23.556609883+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.556660989+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.556714138+01:00 [INFO] - Spawning room: Room { x: 76, y: 22, width: 4, height: 8 } [corridor pos: (78, 26)].
+2020-03-08T19:19:23.556782078+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.556885212+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.556990795+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.557064638+01:00 [INFO] - Spawning room: Room { x: 48, y: 46, width: 9, height: 4 } [corridor pos: (52, 48)].
+2020-03-08T19:19:23.557122084+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.557227042+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.557445622+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.557634062+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.557697546+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (78, 4)].
+2020-03-08T19:19:23.557781402+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (65, 4)].
+2020-03-08T19:19:23.557819872+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.557853865+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.557887399+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.557915992+01:00 [INFO] - Spawning room: Room { x: 74, y: 12, width: 8, height: 7 } [corridor pos: (78, 15)].
+2020-03-08T19:19:23.557950661+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.558007569+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.558039368+01:00 [INFO] - Spawning room: Room { x: 76, y: 13, width: 5, height: 9 } [corridor pos: (78, 17)].
+2020-03-08T19:19:23.558074359+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.558138511+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.558332998+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.558407389+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.558439632+01:00 [INFO] - Spawning room: Room { x: -1, y: 1, width: 5, height: 6 } [corridor pos: (1, 4)].
+2020-03-08T19:19:23.558476240+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.558506773+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.558597798+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.558629859+01:00 [INFO] - Spawning room: Room { x: 41, y: -1, width: 4, height: 4 } [corridor pos: (43, 1)].
+2020-03-08T19:19:23.558665280+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.558696219+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.558724466+01:00 [INFO] - Spawning room: Room { x: 49, y: -2, width: 4, height: 7 } [corridor pos: (51, 1)].
+2020-03-08T19:19:23.558759248+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.558822791+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.558894308+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.559019220+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.559088018+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.559119525+01:00 [INFO] - Spawning room: Room { x: -3, y: 8, width: 8, height: 6 } [corridor pos: (1, 11)].
+2020-03-08T19:19:23.559154863+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:19:23.559208564+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:19:23.559301206+01:00 [INFO] - Room roll successfull
+2020-03-08T19:19:23.559336414+01:00 [INFO] - Spawning room: Room { x: 19, y: -3, width: 8, height: 9 } [corridor pos: (23, 1)].
+2020-03-08T19:19:23.559372438+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.733366860+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T19:22:49.733758751+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.733796850+01:00 [INFO] - Spawning room: Room { x: 5, y: 31, width: 9, height: 6 } [corridor pos: (9, 34)].
+2020-03-08T19:22:49.733846059+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (9, 37)].
+2020-03-08T19:22:49.733912740+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.733990076+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.734023429+01:00 [INFO] - Spawning room: Room { x: -2, y: 0, width: 6, height: 9 } [corridor pos: (1, 4)].
+2020-03-08T19:22:49.734059764+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.734090279+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.734154738+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (28, 1)].
+2020-03-08T19:22:49.734228125+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.734292238+01:00 [INFO] - Spawning room: Room { x: 25, y: 36, width: 7, height: 4 } [corridor pos: (28, 38)].
+2020-03-08T19:22:49.734357039+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.734423179+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.734495373+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.734557754+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.734589088+01:00 [INFO] - Spawning room: Room { x: 8, y: -1, width: 7, height: 4 } [corridor pos: (11, 1)].
+2020-03-08T19:22:49.734624996+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.734722183+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.734793801+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.734856517+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.734888013+01:00 [INFO] - Spawning room: Room { x: 61, y: 46, width: 7, height: 4 } [corridor pos: (64, 48)].
+2020-03-08T19:22:49.734922883+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.735016943+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (7, 48)].
+2020-03-08T19:22:49.735060077+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (7, 24)].
+2020-03-08T19:22:49.735125253+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.735156601+01:00 [INFO] - Spawning room: Room { x: 20, y: 20, width: 9, height: 8 } [corridor pos: (24, 24)].
+2020-03-08T19:22:49.735237+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (56, 24)].
+2020-03-08T19:22:49.735355648+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (56, 46)].
+2020-03-08T19:22:49.735429059+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.735460513+01:00 [INFO] - Spawning room: Room { x: 15, y: 43, width: 8, height: 6 } [corridor pos: (19, 46)].
+2020-03-08T19:22:49.735503234+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (15, 46)].
+2020-03-08T19:22:49.735537954+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.735566243+01:00 [INFO] - Spawning room: Room { x: 13, y: 43, width: 4, height: 5 } [corridor pos: (15, 45)].
+2020-03-08T19:22:49.735609307+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (15, 34)].
+2020-03-08T19:22:49.735710009+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.735773435+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.735812788+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.735841367+01:00 [INFO] - Spawning room: Room { x: 50, y: 44, width: 6, height: 9 } [corridor pos: (53, 48)].
+2020-03-08T19:22:49.735875903+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.735934118+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (46, 48)].
+2020-03-08T19:22:49.735974808+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.736003711+01:00 [INFO] - Spawning room: Room { x: 44, y: 30, width: 4, height: 4 } [corridor pos: (46, 32)].
+2020-03-08T19:22:49.736042696+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.736071857+01:00 [INFO] - Spawning room: Room { x: 43, y: 25, width: 7, height: 7 } [corridor pos: (46, 28)].
+2020-03-08T19:22:49.736106688+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.736197626+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.736275582+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.736391187+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.736461155+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.736492599+01:00 [INFO] - Spawning room: Room { x: 36, y: 45, width: 5, height: 7 } [corridor pos: (38, 48)].
+2020-03-08T19:22:49.736527226+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.736559097+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.736587334+01:00 [INFO] - Spawning room: Room { x: 23, y: 44, width: 9, height: 8 } [corridor pos: (27, 48)].
+2020-03-08T19:22:49.736621091+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.736683754+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:22:49.736719030+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.736747418+01:00 [INFO] - Spawning room: Room { x: -1, y: 34, width: 4, height: 6 } [corridor pos: (1, 37)].
+2020-03-08T19:22:49.736782446+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:22:49.736845915+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (1, 8)].
+2020-03-08T19:22:49.736910069+01:00 [INFO] - Room roll successfull
+2020-03-08T19:22:49.736941349+01:00 [INFO] - Spawning room: Room { x: 1, y: 6, width: 9, height: 5 } [corridor pos: (5, 8)].
+2020-03-08T19:22:49.737050611+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.890616714+01:00 [INFO] - STARTING NEW R&C DUNGEON GENERATION PROCESS
+2020-03-08T19:23:54.891010175+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.891055352+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.891152588+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.891191493+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.891222447+01:00 [INFO] - Spawning room: Room { x: 11, y: -3, width: 9, height: 8 } [corridor pos: (15, 1)].
+2020-03-08T19:23:54.891294063+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.891415262+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.891488631+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.891521808+01:00 [INFO] - Spawning room: Room { x: 74, y: 40, width: 9, height: 7 } [corridor pos: (78, 43)].
+2020-03-08T19:23:54.891558469+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.891618074+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.891690903+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.891723460+01:00 [INFO] - Spawning room: Room { x: 32, y: 44, width: 8, height: 9 } [corridor pos: (36, 48)].
+2020-03-08T19:23:54.891759715+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.891825389+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (7, 48)].
+2020-03-08T19:23:54.891903011+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: East [corridor pos: (7, 1)].
+2020-03-08T19:23:54.891942034+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (12, 1)].
+2020-03-08T19:23:54.892006525+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.892038695+01:00 [INFO] - Spawning room: Room { x: 10, y: 4, width: 4, height: 7 } [corridor pos: (12, 7)].
+2020-03-08T19:23:54.892121327+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.892158567+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: North [corridor pos: (5, 48)].
+2020-03-08T19:23:54.892216685+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.892254699+01:00 [INFO] - Spawning room: Room { x: 3, y: 42, width: 5, height: 9 } [corridor pos: (5, 46)].
+2020-03-08T19:23:54.892329857+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.892421797+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.892493885+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (51, 1)].
+2020-03-08T19:23:54.892541567+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (51, 9)].
+2020-03-08T19:23:54.892640096+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.892674596+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.892703983+01:00 [INFO] - Spawning room: Room { x: -1, y: 4, width: 4, height: 5 } [corridor pos: (1, 6)].
+2020-03-08T19:23:54.892738845+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.892769357+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.892799813+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (4, 1)].
+2020-03-08T19:23:54.892895519+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.892929673+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.892998958+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.893092418+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.893145726+01:00 [INFO] - Spawning room: Room { x: 43, y: -1, width: 4, height: 4 } [corridor pos: (45, 1)].
+2020-03-08T19:23:54.893182412+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.893246045+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.893297768+01:00 [INFO] - Spawning room: Room { x: 61, y: -2, width: 9, height: 7 } [corridor pos: (65, 1)].
+2020-03-08T19:23:54.893333122+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.893411894+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.893502811+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.893627483+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.893698823+01:00 [INFO] - Corridor failed to advance (OOB)!
+2020-03-08T19:23:54.893761330+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.893792747+01:00 [INFO] - Spawning room: Room { x: 12, y: -2, width: 4, height: 7 } [corridor pos: (14, 1)].
+2020-03-08T19:23:54.893827898+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.893892981+01:00 [INFO] - Room roll successfull
+2020-03-08T19:23:54.893924523+01:00 [INFO] - Spawning room: Room { x: 45, y: -1, width: 7, height: 5 } [corridor pos: (48, 1)].
+2020-03-08T19:23:54.893959814+01:00 [WARN] - FAILED room spawn, skipping...
+2020-03-08T19:23:54.893995550+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: South [corridor pos: (74, 1)].
+2020-03-08T19:23:54.894060619+01:00 [INFO] - Corridor turn roll successful. New corridor advancement direction: West [corridor pos: (74, 16)].

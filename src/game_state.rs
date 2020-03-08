@@ -1,4 +1,5 @@
 use crate::components as cmp;
+use crate::systems as sys;
 use crate::map::{Map, Tile};
 use rltk::{Console, GameState, Rltk};
 use single::Single;
@@ -60,7 +61,9 @@ pub struct State {
 
 impl State {
     fn run_systems(&mut self) {
-        // TODO: add some systems
+        let mut vis = sys::Visibility;
+        vis.run_now(&self.ecs);
+
         self.ecs.maintain();
     }
 

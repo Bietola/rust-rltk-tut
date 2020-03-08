@@ -164,8 +164,8 @@ impl Map {
                     Tile::Wall => rltk::to_cp437('#'),
                 };
 
-                // Draw only if visible by the player.
-                // if pl_viewshed.visible_tiles.contains(&Point::new(x, y)) {
+                // Draw tile only if it is visible by the player.
+                if pl_viewshed.visible_tiles.contains(&Point::new(x, y)) {
                     ctx.set(
                         x as i32,
                         y as i32,
@@ -173,7 +173,7 @@ impl Map {
                         RGB::named(rltk::BLACK),
                         glyph,
                     );
-                // }
+                }
             }
         }
     }
