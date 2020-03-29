@@ -1,0 +1,59 @@
+if time(1..2)
+    & nearby(2..5, potato) {
+
+    him: I like potatoes when they're good, do you like them, too?
+
+    you:
+        1. If they're good, how would anybody not like them?
+        {
+            him: Maybe they're good to me and not to you, dumbass.
+
+            you: Well yes, but then aga... wait, what did you just call me?
+
+            him: Dumbass!
+
+            you: You say that one more time!
+
+            him: dumb...
+
+            him: ...ass.
+
+            him: dumbassdumbassdumbassdumbass...
+
+            you: You know what, I'm done talking with you, old man.
+
+            him: Ok dumbass.
+
+            you: ...
+        }
+
+        2. Of course I do, old man!
+        {
+            him: Me not old man, you mean guy.
+
+            you: Of course you're not! But are the potatoes old men?
+
+            him: You see potatoes always old
+
+            him: Buy sometimes not look like man
+
+            him: Can be man that look like man
+
+            you: Mh mh
+
+            him: But also cat be not man which looks like man
+
+            you: Interesting...
+                
+            him: And maybe they be man that not looks like man! And listen to all stories of old man when he tells them to ground and bushes.
+
+            You: It could be.
+
+            him: Weeeeeeeeee!
+        }
+
+        3. Maybe they're good to you and not to me.
+        {
+            him: ...
+        }
+}

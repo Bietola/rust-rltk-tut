@@ -160,7 +160,7 @@ impl Map {
                 let tile = self.at(x, y);
 
                 let glyph = match tile {
-                    Tile::Floor => rltk::to_cp437(' '),
+                    Tile::Floor => rltk::to_cp437('.'),
                     Tile::Wall => rltk::to_cp437('#'),
                 };
 
